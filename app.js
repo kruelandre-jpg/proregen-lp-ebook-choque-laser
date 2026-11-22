@@ -11,7 +11,7 @@
   var bookCtaThanks = document.getElementById('book-cta-thanks');
   var waLinks = document.querySelectorAll('[data-wa]');
 
-  var ebookUrl = cfg.ebookUrl || 'assets/Ebook-Proregen-Ondas-de-Choque-e-Laser.pdf';
+  var ebookUrl = cfg.ebookUrl || 'assets/Ebook-Proregen-Ondas-Choque-Laser-Guia-Pacientes.pdf';
   var bookUrl = cfg.bookUrl || 'https://www.editoragente.com.br/doi-aqui--7520/p';
   var waNumber = (cfg.whatsappClinic || '54996891295').replace(/\D/g, '');
 
@@ -20,7 +20,7 @@
   if (bookCtaThanks) bookCtaThanks.href = bookUrl;
 
   waLinks.forEach(function (el) {
-    var msg = el.getAttribute('data-wa-msg') || 'Olá! Vi o ebook sobre ondas de choque e laser e gostaria de saber mais.';
+    var msg = el.getAttribute('data-wa-msg') || 'Olá! Vi o ebook sobre laser de alta intensidade e ondas de choque e gostaria de saber mais.';
     el.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg);
   });
 
@@ -101,6 +101,7 @@
   }
 
   function revealThankYou() {
+    try { if (typeof window.fbq === 'function') window.fbq('track', 'Lead'); } catch (e) {}
     if (formWrap) formWrap.hidden = true;
     if (thanks) {
       thanks.hidden = false;

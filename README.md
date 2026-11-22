@@ -1,4 +1,4 @@
-# Landing Page: ebook Ondas de choque e laser de alta intensidade, guia para pacientes (Proregen)
+# Landing Page: ebook revisado (choque-laser), guia para pacientes (Proregen)
 
 Página estática de captura de interesse e entrega do guia gratuito Ondas de choque e laser de alta intensidade.
 
